@@ -1,0 +1,1 @@
+CREATE TABLE cheeps(id SERIAL PRIMARY KEY, cheep VARCHAR(60));

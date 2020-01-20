@@ -1,3 +1,21 @@
+Chitter app is not complete. 
+
+** Creating main Chitter App database **
+
+Connect to psql
+Create the database using the psql command CREATE DATABASE chitter_app;
+Connect to the database using the pqsl command \c cheeps;
+Run the query we have saved in the file 01_posting_cheeps_table.sql
+
+** Creating a test databases **
+
+steps in terminal
+Ali=# CREATE DATABASE chitter_app_test;
+CREATE DATABASE
+Ali=# \c chitter_app_test;
+You are now connected to database "chitter_app_test" as user "Ali".
+chitter_app_test=# CREATE TABLE cheeps(id SERIAL PRIMARY KEY, cheep VARCHAR(60));
+
 Chitter Challenge
 =================
 
