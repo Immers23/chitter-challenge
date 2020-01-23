@@ -8,14 +8,18 @@ feature 'Viewing cheeps' do
 end
 
 
-feature 'Viewing bookmarks' do
-  scenario 'A user can see bookmarks' do
-    connection = PG.connect(dbname: 'chitter_app_test')
+feature 'Viewing cheeps' do
+  scenario 'A user can see cheeps' do
+    # connection = PG.connect(dbname: 'chitter_app_test')
+    #
+    #
+    # connection.exec("INSERT INTO cheeps VALUES(1, 'testing with a random cheep of giberish');")
+    # connection.exec("INSERT INTO cheeps VALUES(2, 'a cheep about a tv programme');")
+    # connection.exec("INSERT INTO cheeps VALUES(3, 'a new complaining cheep');")
 
-
-    connection.exec("INSERT INTO cheeps VALUES(1, 'testing with a random cheep of giberish');")
-    connection.exec("INSERT INTO cheeps VALUES(2, 'a cheep about a tv programme');")
-    connection.exec("INSERT INTO cheeps VALUES(3, 'a new complaining cheep');")
+    Cheeps.create(cheep: 'testing with a random cheep of giberish')
+    Cheeps.create(cheep: 'a cheep about a tv programme')
+    Cheeps.create(cheep: 'a new complaining cheep')
 
     visit('/cheeps')
 
